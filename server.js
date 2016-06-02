@@ -19,4 +19,4 @@ app.use((err,req,res,next)=> {
   res.status(500).json({message: err.message});
 });
 
-app.listen(3000,()=> console.log('Treats up on port 3000'));
+app.listen(process.env.PORT || 3000,()=> console.log('Treats up on port ' + process.env.PORT || 3000));
